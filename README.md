@@ -1,2 +1,5 @@
 # ecornelsen-dotfiles-master
-place to save config files for linux environment
+
+helpful config scripts for setting up linux environment
+
+inspired by [jtprince](https://github.com/jtprince/dotfiles)
