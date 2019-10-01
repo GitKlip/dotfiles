@@ -1,4 +1,4 @@
-# ecornelsen-dotfiles-master
+# dotfiles
 
 helpful config scripts for setting up linux environment
 
