@@ -1,0 +1,126 @@
+# amazon cloud EC2 instances:
+export AWSID="i-b5a0196f"
+alias AWSSTOP="aws ec2 stop-instances --instance-ids $AWSID"
+alias AWSSTART="aws ec2 start-instances --instance-ids $AWSID"
+alias gotoaws="ssh $RMT -t 'source /home/jtprince/dotfiles/config/remote_root_bashrc; cd /home/build; bash -l'"
+
+# apt-get
+# alias apti='sudo apt-get install'
+# alias aptinstall='sudo apt-get install'
+# alias apts='aptitude search'
+# alias aptsearch='aptitude search'
+# alias aptr='sudo aptitude remove --purge-unused'
+# alias aptremove='sudo aptitude remove --purge-unused'
+# alias aptshow='apt-cache show'
+# alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove'
+# alias aptaddkey='sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com'
+# alias dependenciesr="apt-cache --recurse depends"
+# alias dependencies="apt-cache depends"
+# alias depends_on="apt-cache rdepends"
+# alias aptppa='sudo add-apt-repository'
+
+# docker
+export DOCKERDOBAWEB="cd /home/jtprince/dev/docker.doba.com && docker-compose run --service-ports web"
+alias dkdobabash="$DOCKERDOBAWEB bash"
+
+# pacman and yaourt
+alias pinstall='pacaur -S --noconfirm'
+alias pint=pinstall
+
+# extraction & compression
+alias utar='dtrx -n'
+# compression (see ~/bin/tarz)
+alias bunzip='bunzip2'
+alias bzip='bzip2'
+
+# wine
+alias wine32="export WINEARCH=win32; export WINEPREFIX=~/.wine32; wine"
+alias winecfg32="export WINEARCH=win32; export WINEPREFIX=~/.wine32; winecfg"
+alias wine64="export WINEARCH=win64; export WINEPREFIX=~/.wine64; wine"
+alias winecfg64="export WINEARCH=win64; export WINEPREFIX=~/.wine64; winecfg"
+
+# navigation
+alias .........='cd ../../../../../../../..'
+alias ........='cd ../../../../../../..'
+alias .......='cd ../../../../../..'
+alias ......='cd ../../../../..'
+alias .....='cd ../../../..'
+alias ....='cd ../../..'
+alias ...='cd ../..'
+alias ..='cd ..'
+
+# ruby
+alias be="bundle exec"
+
+# file system
+alias ls="ls --color=auto"
+alias dl='gvfs-trash'
+alias sudoe="sudo -E"
+alias mount_wd15="gvfs-mount smb://wd15/USB_Storage"
+
+# nmatrix
+alias atlasinclude="export C_INCLUDE_PATH=/usr/include/atlas && export CPLUS_INCLUDE_PATH=/usr/include/atlas"
+alias includeatlas=atlasinclude
+
+# common spelling mistakes
+alias sl="ls"
+alias givm="gvim"
+alias gvmi="gvim"
+alias gimv="gvim"
+alias gim="gvim"
+
+alias gti="git"
+alias svim="sudo -E nvim"
+alias sgvim="sudo -E nvim"
+alias nvimscratch="nvim -c 'let g:pymode_rope=0'"
+alias gvimscratch="nvim-gtk -- -c 'let g:pymode_rope=0'"
+alias mdkir="mkdir"
+alias eixt="exit"
+
+# latex
+alias latexmk="latexmk -pdf -xelatex"
+
+# grep and find
+alias rgrep="grep -rs"
+alias rgreptext="grep -rs --binary-files=without-match"
+alias gg="git grep"
+# -L follow links
+# alias findit="find -L . -iname"
+
+# git
+alias gitcim="gitci"
+
+# chat
+alias hangouts="chromium https://hangouts.google.com/ --new-window"
+
+# media
+alias vlisten="vlc --intf rc -Vdummy"
+#alias mp="mpd ; ncmpcpp ; mpd --kill"
+alias mplayer="mplayer -ao pulse -af scaletempo"
+#alias youtube-dl="youtube-dl --prefer-ffmpeg"
+
+alias xmod="xmodmap ~/.config/xmodmap"
+
+# applications
+alias exercism="exercism --config ~/.config/exercism.json"
+alias chromiumtest="chromium --user-data-dir=~/.config/chromium-test"
+alias chromiumdoba="chromium --user-data-dir=~/.config/chromium-doba"
+alias chromiumcrux="chromium --user-data-dir=~/.config/chromium-crux"
+alias chromiumfaenrandir="chromium --user-data-dir=~/.config/chromium-faenrandir"
+alias chromium3plcentralbi="chromium --user-data-dir=~/.config/chromium-3plcentralbi"
+alias chromiummelissa="chromium --user-data-dir=~/.config/chromium-melissa"
+alias libreoffice_to_pdf="libreoffice --headless --convert-to pdf"
+
+# not using right now
+alias tmux="tmux -f ~/.config/tmux/config"
+
+# clear the screen (so no scrollback)
+alias clearscreen="echo -ne '\033c'"
+
+alias open="xdg-open"
+
+alias conky="conky --config ~/.config/conky/conky.conf"
+
+alias mp3encodinginfo="ffprobe -show_format 2>/dev/null"
+
+alias prn="poetry run"
