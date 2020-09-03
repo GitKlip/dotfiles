@@ -67,6 +67,24 @@ def each_slice(size, iterable):
         yield current_slice
 
 
+def each_slice_or_size(iterable, max_len: int, max_bytes: float):
+    current_slice = []
+
+    for item in iterable:
+        if sys.getsizeof(current_slice) + sys.getsizeof(item) >= max_bytes:
+            yield current_slice
+            current_slice = []
+
+        current_slice.append(item)
+
+        if len(current_slice) >= max_len:
+            yield current_slice
+            current_slice = []
+
+    if current_slice:
+        yield current_slice
+
+
 def all_combinations(iterable, min_size=1, max_size=None):
     """ Returns combinations of all lengths up to the size of iterable.
 
