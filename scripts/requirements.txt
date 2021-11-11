@@ -1,0 +1,9 @@
+pip
+python-language-server
+black
+organize-tool
+pygments
+pynvim
+ipython
+grasp
+afew
