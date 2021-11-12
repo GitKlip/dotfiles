@@ -29,7 +29,7 @@ Provide your user account password if BECOME password is asked.
 ## What it will do
 - [ ] MacOS:
   - [ ] configure command/control keys to so control key works as expected in IDE
-  - [ ] set bash as the shell default (bash is the least-common-denominator when it comes to shells) `chsh -s /bin/bash`
+  - [ ] set bash as the shell default (bash is the least-common-denominator when it comes to shells) `chsh -s /bin/zsh`
 - [ ] shell config (choice of zsh or bash)
   - [ ] [zsh](https://ohmyz.sh/) - `bash` replacement. `.dotfiles` folder includes a lot of additional stuff for `zsh`.
   - [ ] bash - since it's the least common denominator on many systems, may want to go with bash.
@@ -86,5 +86,10 @@ Provide your user account password if BECOME password is asked.
 
 
 
-
+## Homebrew
+* Homebrew : A package manager which helps you to install softwares. e.g. `$ brew install git`
+* Homebrew-cask : A tool which helps you to install Mac applications by using Homebrew. e.g. `$ brew cask install google-chrome`
+* Brewfile : A file where you define softwares and applications you want to install. e.g. 
+* Brew Bundle : A Homebrew subcommand to run your Brewfile. e.g. `$ brew bundle`
+* Brew tap : A Homebrew subcommand to add additional repositories which are not in the official formulae. e.g. `$ brew tap neovim/neovim`
 

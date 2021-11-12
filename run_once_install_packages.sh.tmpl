@@ -1,0 +1,36 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+# Note that the Brewfile is embedded directly in the script with a bash here document. chezmoi will run this script whenever its contents change, i.e. when you add or remove brews or casks.
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+
+brew "make", link: false
+brew "curl"
+brew "curl-openssl"
+brew "go", link: true, force: true
+# brew "git"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "terraform"
+brew "tree"
+brew "vim", args: ["HEAD"]
+brew "wget"
+brew "htop"
+brew "flock"
+brew "git-delta"
+brew "fortune"
+brew "pyenv"
+brew "poetry"
+brew "gist"
+
+cask "docker"
+cask "firefox"
+cask "slack"
+cask "google-chrome"
+
+EOF
+
+{{ end -}}
+

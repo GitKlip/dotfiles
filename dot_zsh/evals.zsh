@@ -61,7 +61,7 @@ init_jobs() {
         set_tmuxenv
     fi
 
-    set_rustsrc
+    # set_rustsrc
 }
 
 init_jobs

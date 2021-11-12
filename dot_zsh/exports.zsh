@@ -14,17 +14,17 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-if [[ ${OSTYPE} == darwin* ]]; then
-	export HOMEBREW_NO_AUTO_UPDATE=1
-	export HOMEBREW_VERBOSE_USING_DOTS=1
-	# fzf
-	source /usr/local/opt/fzf/shell/key-bindings.zsh
-	source /usr/local/opt/fzf/shell/completion.zsh
-else
-	# fzf
-	source /usr/share/fzf/key-bindings.zsh
-	source /usr/share/fzf/completion.zsh
-fi
+# if [[ ${OSTYPE} == darwin* ]]; then
+# 	export HOMEBREW_NO_AUTO_UPDATE=1
+# 	export HOMEBREW_VERBOSE_USING_DOTS=1
+# 	# fzf
+# 	source /usr/local/opt/fzf/shell/key-bindings.zsh
+# 	source /usr/local/opt/fzf/shell/completion.zsh
+# else
+# 	# fzf
+# 	source /usr/share/fzf/key-bindings.zsh
+# 	source /usr/share/fzf/completion.zsh
+# fi
 
 export PATH="$HOME/.bin:$PATH"
 
