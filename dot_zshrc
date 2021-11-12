@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-# WHAT I WANT
-# ailiases
-# prompt l1: --- user@machine --- branch@env  l2: pwd $
-# search history (?oh-my-zsh?)
 
 if [[ "$ZPROF" = true ]]; then
         zmodload zsh/zprof
@@ -27,6 +23,7 @@ source $HOME/.zsh/history.zsh
 source $HOME/.zsh/keys.zsh
 source $HOME/.zsh/aliases.zsh
 # source $HOME/.zsh/gpg-agent.zsh
+source $HOME/.zsh/prompt.zsh
 
 # if [ -f "$HOME/.cargo/env" ]; then
 #         source $HOME/.cargo/env
@@ -43,5 +40,3 @@ if [[ "$ZPROF" = true ]]; then
         zprof
 fi
 
-# export PS1="[@\[$(tput sgr0)\]\[\033[38;5;45m\]\W\[$(tput sgr0)\]] \\$ \[$(tput sgr0)\]"
-PROMPT="--- %n@%m ---\n [%1~] $# "

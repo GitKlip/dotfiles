@@ -1,3 +1,5 @@
+
+
 bindkey -v
 bindkey '\ew' kill-region
 bindkey -s '\el' "ls\n"
