@@ -15,8 +15,8 @@ args = parser.parse_args()
 
 def make_case_insensitive(term):
     def either(char):
-        return f'[{char.lower()}{char.upper()}]' if char.isalpha() else char
-    return ''.join(map(either, term))
+        return f"[{char.lower()}{char.upper()}]" if char.isalpha() else char
+    return "".join(map(either, term))
 
 
 term = args.term

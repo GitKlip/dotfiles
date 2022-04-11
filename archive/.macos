@@ -945,7 +945,6 @@ for app in "Activity Monitor" \
 	"Photos" \
 	"Safari" \
 	"SizeUp" \
-	"Spectacle" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Transmission"; do

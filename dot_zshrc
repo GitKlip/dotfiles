@@ -24,6 +24,7 @@ source $HOME/.zsh/keys.zsh
 source $HOME/.zsh/aliases.zsh
 # source $HOME/.zsh/gpg-agent.zsh
 source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/python.zsh
 
 # if [ -f "$HOME/.cargo/env" ]; then
 #         source $HOME/.cargo/env

@@ -21,6 +21,11 @@ if [[ ${PAGER} == 'less' ]]; then
     (( ! ${+LESS_TERMCAP_us} )) && export LESS_TERMCAP_us=$'\E[1;32m'   # Begins underline.
 fi
 
+# extraction & compression
+alias utar='dtrx -n'
+# compression (see ~/bin/tarz)
+alias bunzip='bunzip2'
+alias bzip='bzip2'
 
 # if exa exist, alias to ls
 if (( ${+commands[exa]} )); then
@@ -33,7 +38,7 @@ if (( ${+commands[exa]} )); then
     alias llfu='exa -bghHliS --git'
 else
     alias l='ls -1A'         # Lists in one column, hidden files.
-    alias ll='ls -lh'        # Lists human readable sizes.
+    alias ll='ls -lh --color=auto'        # Lists human readable sizes.
     alias lr='ll -R'         # Lists human readable sizes, recursively.
     alias la='ll -A'         # Lists human readable sizes, hidden files.
     alias lm='la | "$PAGER"' # Lists human readable sizes, hidden files through pager.
@@ -77,14 +82,14 @@ if (( $+commands[ggrep] )); then
     alias ggrep="ggrep $GREP_OPTIONS"
 fi
 
-alias ..="cd .."
-alias ...="cd ../../"
-alias ....="cd ../../../"
-alias .....="cd ../../../../"
+# navigation
+alias .......='cd ../../../../../..'
+alias ......='cd ../../../../..'
+alias .....='cd ../../../..'
+alias ....='cd ../../..'
+alias ...='cd ../..'
+alias ..='cd ..'
 
-# if [ -f "$HOME/.emacs.d/bin/doom" ]; then
-#     alias doom="$HOME/.emacs.d/bin/doom"
-# fi
 
 dotfiles-update() { cd "$HOME/dotfiles" && ./install.sh; }
 
